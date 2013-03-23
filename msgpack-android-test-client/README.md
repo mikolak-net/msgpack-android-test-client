@@ -1,4 +1,4 @@
-msgpack-android-test-server
+msgpack-android-test-client
 ==========================
 
 This is the client part of a simple Android test pair, for sanity testing.
