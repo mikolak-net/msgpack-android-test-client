@@ -38,6 +38,12 @@ public class HelloAndroidActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        //FIX for API level 8 bug, as in:
+        //http://code.google.com/p/android/issues/detail?id=9431
+        java.lang.System.setProperty("java.net.preferIPv4Stack", "true");
+		java.lang.System.setProperty("java.net.preferIPv6Addresses", "false");
+        
 		Log.i(TAG, "onCreate");
         setContentView(R.layout.main);
     }
